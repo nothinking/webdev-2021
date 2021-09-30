@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>Position</title>
+  <style>
+      body {
+          height: 2000px;
+      }
+      .wrapper {
+          width: 100px;
+          height: 1000px;
+          position: relative;
+          top: 200px;
+          border: 1px solid red;
+          background-color: brown;
+      }
+    .abs {
+        width: 100px;
+        height: 100px;
+        background-color: #00c73c;
+        position: fixed;
+        top: 100px;
+        left: 100px;
+    }
+
+   .sticky {
+       width: 100px;
+       height: 100px;
+       background-color: darkgrey;
+       position: sticky;
+       top: 100px;
+   }
+  </style>
+</head>
+<body>
+<div class="wrapper">
+  <div class="abs">absolute</div>
+  <div class="sticky">sticky</div>
+</div>
+<div style="height: 100000px">
+
+</div>
+</body>
+</html>
