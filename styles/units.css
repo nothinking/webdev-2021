@@ -1,0 +1,27 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    /*height: 100%;*/
+    font-size: 18px;
+}
+
+.wrapper {
+    border: 2px solid red;
+    /*height: 100%;*/
+    width: 100vw;
+    height: 100vh;
+    background-color: #00c73c;
+
+}
+
+.wrapper2 {
+    /*font-size: 12px;*/
+    font-size: 2em;
+}
+.inner-wrapper {
+    font-size: 2rem;
+}
