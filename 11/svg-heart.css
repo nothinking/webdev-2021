@@ -1,0 +1,101 @@
+@charset "utf-8";
+:root {
+    --color1: #CCCCFF;
+    --color2: #6495ED;
+    --color3: #40E0D0;
+    --color4: #9FE2BF;
+    --color5: #DE3163;
+    --color6: #FF7F50;
+    --color7: #FFBF00;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper {
+    width: 300px;
+    height: 300px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.wrapper .heart {
+    width: 100%;
+    height: 100%;
+}
+.wrapper .heart svg {
+    stroke: var(--color2);
+    fill: var(--color1);
+    stroke-dasharray: 54;
+    stroke-dashoffset: 54;
+}
+.wrapper .heart svg path {
+    stroke-width: 1;
+}
+.wrapper .heart .like {
+    animation: like 2s ease forwards,
+    heartbeat 0.5s linear 2s 2 forwards;
+}
+.wrapper .heart .unlike {
+    animation: unlike 2s ease forwards;
+}
+@keyframes like {
+    0% {
+        stroke-dashoffset: 54;
+        fill: var(--color1);
+        stroke: var(--color2);
+    }
+    75% {
+        stroke-dashoffset: 0;
+        fill: var(--color1);
+        stroke: var(--color2);
+    }
+    100% {
+        stroke-dashoffset: 0;
+        stroke: hotpink;
+        fill: hotpink;
+    }
+}
+@keyframes unlike {
+    0% {
+        stroke-dashoffset: 0;
+        stroke: hotpink;
+        fill: var(--color1);
+    }
+    75% {
+        stroke-dashoffset: 54;
+        stroke: hotpink;
+        fill: var(--color1);
+
+    }
+    100% {
+        stroke-dashoffset: 54;
+        fill: var(--color1);
+        stroke: var(--color2);
+    }
+}
+@keyframes heartbeat {
+    0% {
+        transform: scale(1);
+        transform-origin: center;
+    }
+    50% {
+        transform: scale(0.9);
+        transform-origin: center;
+    }
+    100% {
+        transform: scale(1);
+        transform-origin: center;
+    }
+}

@@ -1,0 +1,58 @@
+@charset "utf-8";
+:root {
+    --color1: #CCCCFF;
+    --color2: #6495ED;
+    --color3: #40E0D0;
+    --color4: #9FE2BF;
+    --color5: #DE3163;
+    --color6: #FF7F50;
+    --color7: #FFBF00;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper {
+    width: 300px;
+    height: 300px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.wrapper svg line {
+    animation: stroke 1s linear infinite alternate;
+    stroke-dashoffset: 100;
+    stroke-dasharray: 100;
+}
+@keyframes stroke {
+    from {
+        stroke-dashoffset: 0;
+    }
+    to {
+        stroke-dashoffset: 100;
+    }
+}
+.wrapper svg {
+    background-color: var(--color1);
+}
+.wrapper svg circle {
+    animation: circle 1s linear infinite;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+@keyframes circle {
+    to {
+        transform: rotate(1turn);
+    }
+}

@@ -1,0 +1,66 @@
+@charset "utf-8";
+:root {
+    --color1: #CCCCFF;
+    --color2: #6495ED;
+    --color3: #40E0D0;
+    --color4: #9FE2BF;
+    --color5: #DE3163;
+    --color6: #FF7F50;
+    --color7: #FFBF00;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper {
+    width: 300px;
+    height: 300px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color2);
+}
+.wrapper svg {
+    width: 100%;
+    height: 100%;
+}
+.wrapper svg line:nth-child(1) {
+    stroke-dasharray: 7;
+    animation: offset 2s linear infinite;
+}
+@keyframes offset {
+    from {
+        stroke-dashoffset: 0;
+    }
+    to {
+        stroke-dashoffset: 100;
+    }
+}
+.wrapper svg circle {
+    fill: transparent;
+    stroke: var(--color1);
+    stroke-width: 2;
+    stroke-dasharray: 40;
+    stroke-linecap: round;
+    animation: circleAni 2s linear infinite;
+    transform-origin: 50% 50%;
+}
+@keyframes circleAni {
+    from {
+        transform: rotate(0);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}

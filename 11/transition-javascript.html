@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="minimum-scale=1.0, width=device-width">
+  <title>Tansition javascript</title>
+  <style type="text/css">
+    p {
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .box {
+        width: 50px;
+        height: 30px;
+        background-color: pink;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: 1s
+    }
+  </style>
+</head>
+<body>
+<p>Click anywhere</p>
+<div class="box">box</div>
+<script>
+  const box = document.querySelectorAll('.box')[0];
+  document.addEventListener('click', function (e) {
+    box.style.left = e.clientX-25 + 'px';
+    box.style.top = e.clientY-25 + 'px';
+  });
+</script>
+</body>
+</html>

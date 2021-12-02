@@ -1,0 +1,86 @@
+@charset "utf-8";
+:root {
+    --color1: #CCCCFF;
+    --color2: #6495ED;
+    --color3: #40E0D0;
+    --color4: #9FE2BF;
+    --color5: #DE3163;
+    --color6: #FF7F50;
+    --color7: #FFBF00;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper {
+    width: 861px;
+    height: 571px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#moon {
+    animation: moon 1s linear infinite alternate;
+}
+@keyframes moon {
+    from {
+        transform: translateY(10px);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+#four-1, #four-2 {
+    animation: four 3s linear infinite alternate;
+    transform-origin: bottom;
+    transform-box: fill-box;
+}
+@keyframes four {
+    from {
+        transform: rotateX(10deg);
+    }
+    to {
+        transform: rotateX(-10deg);
+    }
+}
+#zero {
+    animation: zero 1s ease-in-out infinite alternate;
+    transform-origin: bottom;
+    transform-box: fill-box;
+}
+@keyframes zero {
+    from {
+        transform: translateY(-10px);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+#cloud1, #cloud2 {
+    animation: cloud 3s ease-in-out infinite alternate;
+    transform-origin: bottom;
+    transform-box: fill-box;
+}
+@keyframes cloud {
+    from {
+        transform: translateX(-15px);
+    }
+    from {
+        transform: translateX(15px);
+    }
+}
+#cloud2 {
+    animation-delay: 1.5s;
+}

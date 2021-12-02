@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="minimum-scale=1.0, width=device-width">
+  <title>Transition</title>
+  <link rel="stylesheet" href="transition1.css">
+</head>
+<body>
+<div class="wrapper">
+  <div class="box">box</div>
+</div>
+<script>
+  document.querySelectorAll(".box")[0].addEventListener('transitionend', function(e) {
+  	console.log('transition end!', e);
+  })
+</script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+@charset "utf-8";
+:root {
+    --color1: #CCCCFF;
+    --color2: #6495ED;
+    --color3: #40E0D0;
+    --color4: #9FE2BF;
+    --color5: #DE3163;
+    --color6: #FF7F50;
+    --color7: #FFBF00;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper {
+    width: 300px;
+    height: 300px;
+    position: relative;
+    display: flex;
+    /*justify-content: center;*/
+    align-items: center;
+    background-color: var(--color2);
+}
+.box {
+    width: 50px;
+    height: 30px;
+    background-color: var(--color1);
+    animation: ani 3s linear 1s; /* delay 와 연관이 있음 */
+    animation-fill-mode: none;
+}
+@keyframes ani {
+    0% {
+        transform: translateX(-50px);
+    }
+    100% {
+        transform: translateX(300px);
+    }
+}
